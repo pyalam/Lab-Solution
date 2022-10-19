@@ -10,10 +10,10 @@ namespace Lab1Project //school name
 
             int X = 100;
             double = 5.99; 
-                decimal 
-            string str = "todays demo "
+                decimal
+            string str = "todays demo ";
 
-                char singleletter ='A'
+            char singleletter = 'A';
 
                 bool myconditioncheck = true;
 

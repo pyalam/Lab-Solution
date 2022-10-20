@@ -1,8 +1,18 @@
 ﻿using System;
 
 namespace Lab1Project //school name
-{
-    internal class Program  //classname -- 1st class,2nd class
+{ 
+    internal class GrandParentClass  //parent class or base class
+    {
+       protected int x;
+       protected int y;
+
+        public void parentmethod()
+        {
+            Console.WriteLine("Hello im from paremt class method");
+        }
+    }
+    internal class fatherClass: GrandParentClass  //child class
     {
         static void Main(string[] args) // method names
         {
@@ -88,9 +98,40 @@ namespace Lab1Project //school name
             //    Console.WriteLine(dummycity);
             //}
 
+            //test labobjectobj = new test();
 
+            //labobjectobj.Paramstring = "This is setting up parameter information";
+
+            //labobjectobj.LabTesting("Hey Im calling you from main method");
+
+            fatherClass obj = new fatherClass();
+            obj.x = 100;
+            obj.y = 200;
+            obj.parentmethod();
+            
+
+        }
+    }
+    class childclass:fatherClass
+    {
+
+        public void childMethod()
+        {
+            Console.WriteLine("Im in  child class");
+
+            childclass objectnew = new childclass();
+            string[] argsarray = { "test2", "test3" };
+            //Main(
+            //    argsarray);// father method
+
+            objectnew.parentmethod();// grand father method;
+
+            objectnew.x = 100;// grand father properties
+
+            objectnew.y = 200;// grand father property
 
 
         }
+
     }
 }
